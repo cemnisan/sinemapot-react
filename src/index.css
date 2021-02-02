@@ -12,10 +12,20 @@ code {
     monospace;
 }
 
+p{
+  color:white;
+}
+
+h2,h5{
+  color: white;
+}
+
 #headerSection{
   background-image: url('./headerPhoto.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
-  height: 100vh;
+  
 }
 
 #nav-item{
@@ -24,14 +34,17 @@ code {
   letter-spacing: 3px;
 }
 
+
+
 .latestArticles h1{
   color:#ffffffd5 ;
-  margin-top: 3.5em;
+  margin-top: 4em;
 }
 
 .title{
   margin-left: 1em;
-  color:#ffffffd5
+  color:#ffffffd5;
+  
 }
 
 .paragph p{ 
@@ -39,6 +52,15 @@ code {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  
+}
+
+.body p{
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  
 }
 
 #latestImg{
@@ -55,6 +77,9 @@ code {
   width: 560px;
   height: 315px;
 }
+
+
+
 
 
 
