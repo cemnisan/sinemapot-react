@@ -1,6 +1,7 @@
 import Home from '../components/page/Home';
 import About from '../components/page/About';
 import Articles from '../components/articles/Articles';
+import ArticleDetails from '../components/articles/ArticleDetail';
 
 const data = {
     "routerPath":[
@@ -25,6 +26,11 @@ const data = {
             "component":Articles,
             "path":"/articles",
         },
+        {
+            "exact":false,
+            "component":ArticleDetails,
+            "path":"/articles/:id/:slug"
+        }
 
     ]
 }

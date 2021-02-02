@@ -15,7 +15,7 @@ code {
 #headerSection{
   background-image: url('./headerPhoto.jpg');
   background-size: cover;
-  height: auto;
+  height: 100vh;
 }
 
 #nav-item{
@@ -26,7 +26,7 @@ code {
 
 .latestArticles h1{
   color:#ffffffd5 ;
-  margin-top: 6em;
+  margin-top: 3.5em;
 }
 
 .title{
@@ -34,11 +34,27 @@ code {
   color:#ffffffd5
 }
 
+.paragph p{ 
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 #latestImg{
   width: auto;
   height: 200px;
 }
 
+#articlesImg{
+  width: auto;
+  height: 240px;
+}
+
+#detailImg{
+  width: 560px;
+  height: 315px;
+}
 
 
 
