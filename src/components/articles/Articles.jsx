@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { globalContext } from '../../data/context';
+import Search from '../Search';
 import { Link } from 'react-router-dom';
 import slugify from 'slugify';
 import img from '../../headerPhoto.jpg';
@@ -9,7 +10,6 @@ function Articles(props) {
     let movies;
     if (results) {
         movies = results.map((item, index) => {
-            console.log(item)
             return (
                 <>
                     <div className="col-md-4 mb-3">
@@ -31,10 +31,10 @@ function Articles(props) {
             )
         })
     }
-    console.log(movies)
     return (
         <header id="articlesHeader">
             <div className="container">
+                <Search />
                 <div className="row no-gutters">
                     {movies}
                 </div>
