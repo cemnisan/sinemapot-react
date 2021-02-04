@@ -1,7 +1,7 @@
-import Home from '../components/page/Home';
+import HomeCard from '../components/page/HomeCard';
 import About from '../components/page/About';
 import Articles from '../components/articles/Articles';
-import ArticleDetails from '../components/articles/ArticleDetail';
+import ArticlesDetail from '../components/articles/ArticlesDetail';
 import Search from '../components/Search';
 
 const data = {
@@ -10,7 +10,7 @@ const data = {
             "title":"ANASAYFA",
             "slug":"/",
             "exact":true,
-            "component":Home,
+            "component":HomeCard,
             "path":"/",
         },
         {
@@ -29,13 +29,15 @@ const data = {
         },
         {
             "exact":false,
-            "component":ArticleDetails,
-            "path":"/articles/:id/:slug"
+            "component":ArticlesDetail,
+            "path":"/articles/:id/:slug",
+            "slug":""
         },
         {
             "exact":false,
             "component":Search,
-            "path":"/search"
+            "path":"/search",
+            "slug":""
         },
 
     ]

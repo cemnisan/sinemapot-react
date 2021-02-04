@@ -12,8 +12,6 @@ function Search(props) {
     const inputValue = useRef()
     const [state, setState] = useState([])
     const [isTrue, setFalse] = useState(false)
-
-
     useEffect(() => {
         if (q && results) {
             inputValue.current.value = q;
@@ -22,7 +20,7 @@ function Search(props) {
                     item.title.toLowerCase()
                         .includes(q.toLowerCase())
                 ).map((item, index) => (
-                    <>
+                    <div key={index}>
                         <div className="col-md-3">
                             <div className="searchTitle">
                                 <h6>{item.title}</h6>
@@ -39,7 +37,7 @@ function Search(props) {
                                 </button>
                             </Link>
                         </div>
-                    </>
+                    </div>
                 ))
                 setFalse(i => !i)
             setState(movieSearch)
@@ -48,12 +46,12 @@ function Search(props) {
 
     function handleForm(e) {
         e.preventDefault();
-        history.push(`/search?q=${inputValue.current.value}`)
+        history.push(`/search?q=${inputValue.current.value.toLowerCase()}`)
     }
 
     return (
         <div className="container">
-            <form className="form-inline d-flex justify-content-end" onSubmit={handleForm}>
+            <form className="form-inline d-flex justify-content-end mb-2" onSubmit={handleForm}>
                 <div className="form-group mx-sm-3 mb-2">
                     <label
                         htmlFor="search"
