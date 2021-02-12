@@ -10,7 +10,7 @@ function HomeCard(props) {
     let latestMovie;
     if (results) {
         latestMovie = results.filter(item =>
-                 item.vote_average <= 9 && item.vote_average >= 8.8)
+                 item.vote_average <= 8.8 && item.vote_average >= 8.7)
             .map((item,index) => {
                 return (
                     <div className="col-md-4" key={index}>

@@ -11,7 +11,7 @@ function Articles(props) {
     if (results) {
         movies = results.map((item, index) => {
             return (
-                <div key={index}>
+                <>
                     <div className="col-md-4 mb-3">
                         <img id="articlesImg" src={img} alt="..."></img>
                     </div>
@@ -27,7 +27,7 @@ function Articles(props) {
                             </Link>
                         </div>
                     </div>
-                </div>
+                </>
             )
         })
     }

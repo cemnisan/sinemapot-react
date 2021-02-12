@@ -1,6 +1,5 @@
 import React from 'react';
 import Search from '../Search';
-
 function Article(props) {
     const movies = props.movie
     return(

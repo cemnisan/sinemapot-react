@@ -14,13 +14,14 @@ function Search(props) {
     const [isTrue, setFalse] = useState(false)
     useEffect(() => {
         if (q && results) {
+            console.log("searching...")
             inputValue.current.value = q;
             const movieSearch = results.filter
                 (item =>
                     item.title.toLowerCase()
                         .includes(q.toLowerCase())
                 ).map((item, index) => (
-                    <div key={index}>
+                    <>
                         <div className="col-md-3">
                             <div className="searchTitle">
                                 <h6>{item.title}</h6>
@@ -37,7 +38,7 @@ function Search(props) {
                                 </button>
                             </Link>
                         </div>
-                    </div>
+                    </>
                 ))
                 setFalse(i => !i)
             setState(movieSearch)
